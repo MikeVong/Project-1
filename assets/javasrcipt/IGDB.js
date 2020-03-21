@@ -1,5 +1,5 @@
 var gameSearch = "minecraft";
-var queryURL = "https://api.rawg.io/api/games?search="+ gameSearch;
+var queryURL = "https://api.rawg.io/api/games?search=" + gameSearch;
 
 function getGame(){
 	$.ajax({
