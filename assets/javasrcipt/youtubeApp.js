@@ -1,7 +1,10 @@
-
+// api key from youtube v3
 var apiKey = "AIzaSyAVtUWiVEDWPVgD6HebwsUXHJ3PP6qj9gE";
+// api url website link
 var queryURL ="https://www.googleapis.com/youtube/v3/search";
+// search var
 var gameSearch = "final fintasy game detail";
+// search option needed for youtube v3
 var options =
     {
     key: apiKey,
@@ -12,7 +15,7 @@ var options =
     videoEmbeddable: true,
     };
 
-
+// create a function to get the youtube 
 function getVideo()
     {
     $.ajax(
@@ -28,20 +31,13 @@ function getVideo()
                 for (var i = 0; i < response.items.length; i++)
                         {
                         var videoLink = response.items[i].id.videoId;
-                        
                         var newRow=$("<div>");
                         newRow.addClass("col-md-4");
-                        //var newCol=$("<div>");
-                        //newCol.addClass("col-md-4");
                         var img = $("<iframe>");
-                        //img.attr("title","YouTube video player");
-                        //img.attr("type",'\"text/html\"');
                         img.attr("width","380");
                         img.attr("height", "280");
                         img.attr("src", "http://www.youtube.com/embed/"+ videoLink);
                         img.addClass("card");
-                        //newRow.append(newCol);
-                        //newCol.append(img);
                         newRow.append(img);
                         $("#youtubeHere").append(newRow);
                         }
@@ -49,5 +45,5 @@ function getVideo()
                     
                 });
     };
-
+//run the function
 getVideo();
