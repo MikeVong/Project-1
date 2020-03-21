@@ -7,5 +7,9 @@ body {
     background-color: #7A306C;
 }
 #search-button, #random-button {
-    background-color: #FF715B;
-} hi
+		background-color: #27213c;
+		border: black;
+}
+.card{
+	margin-bottom: 20px;
+}
