@@ -1,7 +1,11 @@
 body {
     margin-top: 20px;
-    background-color: rgb(36, 27, 47);
+    background-color: #27213c;
+    color: #B8C4BB;
 }
 .jumbotron {
-    background-color: salmon;
+    background-color: #7A306C;
+}
+#search-button, #random-button {
+    background-color: #FF715B;
 }
