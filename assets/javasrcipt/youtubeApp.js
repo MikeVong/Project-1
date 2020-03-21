@@ -17,7 +17,15 @@ $("#random-button").on("click", function(event)
 $("#search-button").on("click", function(event) 
     {
     event.preventDefault();
-    getVideo();
+    if ($("#search-game").val().trim() === "")
+    {
+        alert("Please enter a game");
+    }
+    else
+    {
+        getVideo();
+    }
+    
     });
 
 function getRandom()
@@ -107,6 +115,7 @@ function getRandom()
                     
                 });
     };
+
 
 
 
