@@ -23,6 +23,9 @@ function getGame(){
 		}).then(function(infoResponse)
 			{
 			console.log(infoResponse);
-			$("#cover-goes-here").html("<img class='card' style='width:300px' src="+ infoResponse.results[0].background_image + ">");
+			$("#cover-goes-here").html("<img class='card' style='width:300px' src=" + infoResponse.results[0].background_image + ">");
+			$("#game-description").html("<h2>" + infoResponse.results[0].name + "</h2>");
+			$("#release-date").html("<h4>" + infoResponse.results[0].released + "</h4>");
+			$("#genre").html("<h4>" + infoResponse.results[0].genres[0].name + "</h4>");
 			});
 };
