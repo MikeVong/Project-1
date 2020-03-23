@@ -24,9 +24,11 @@ $("#search-button").on("click", function(event)
     else
     {
         getVideo();
+
     }
     
     });
+
 
 function getRandom()
     {
