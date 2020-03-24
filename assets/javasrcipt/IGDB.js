@@ -36,11 +36,16 @@ function getGame(){
 				}).then(function(idResponse)
 				{
 					console.log(idResponse)
-					$("#cover-goes-here").html("<img class='card' style='width:300px' src=" + idResponse.background_image + ">");
-					$("#game-description").html("<p class='card' id='name'>" + idResponse.description + "</p>");
+					$("#cover-goes-here").html("<img class='card animated bounceInLeft' style='width: 350px;' src=" + idResponse.background_image + ">");
+					var height = $("#cover").height()
+					$(".scroll").css("max-height",""+height+"");
+					$("#game-description").html("<div class = 'card animated delay-5s fadeIn scroll'>"+idResponse.description+"</div>");
 					$("#release-date").html("<h4 class='card'>" + idResponse.released + "</h4>");
 					$("#genre").html("<h4 class='card'>" + idResponse.genres[0].name + "</h4>");
 					$("#made-by").html("<h4 class='card'>Developed by: " + idResponse.developers[0].name + "</h4>");
+					$("#rating").html("<h4 class='card'>"+idResponse.rating+"/5</h4>");
+					$("#website").html("<h4 class='card animated delay-2s bounceInLeft'><a href='"+idResponse.website+"'>"+idResponse.name+"'s Website</a></h4>");
+					$("#name-goes-here").html("<h4 class= 'card animated delay-1s bounceInLeft'>"+idResponse.name);
 					$("#platform").empty();
 					for (var i=0;i<4;i++)
 						{
@@ -50,8 +55,8 @@ function getGame(){
 							var newCol =$("<div>");
 							newCol.addClass("col-sm-3");
 							var pImg = $("<img>");
-							pImg.attr("width", "100");
-							pImg.attr("height", "100");
+							pImg.attr("width", "50");
+							pImg.attr("height", "50");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
 							pImg.attr("src","./assets/images/pc.png");
@@ -63,8 +68,8 @@ function getGame(){
 							var newCol =$("<div>");
 							newCol.addClass("col-sm-3");
 							var pImg = $("<img>");
-							pImg.attr("width", "100");
-							pImg.attr("height", "100");
+							pImg.attr("width", "50");
+							pImg.attr("height", "50");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
 							pImg.attr("src","./assets/images/ps4.jpg");
@@ -76,8 +81,8 @@ function getGame(){
 							var newCol =$("<div>");
 							newCol.addClass("col-sm-3");
 							var pImg = $("<img>");
-							pImg.attr("width", "100");
-							pImg.attr("height", "100");
+							pImg.attr("width", "50");
+							pImg.attr("height", "50");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
 							pImg.attr("src","./assets/images/xbox.jpg");
@@ -89,8 +94,8 @@ function getGame(){
 							var newCol =$("<div>");
 							newCol.addClass("col-sm-3");
 							var pImg = $("<img>");
-							pImg.attr("width", "100");
-							pImg.attr("height", "100");
+							pImg.attr("width", "50");
+							pImg.attr("height", "50");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
 							pImg.attr("src","./assets/images/ios.png");
