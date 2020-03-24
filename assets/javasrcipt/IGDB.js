@@ -40,10 +40,10 @@ function getGame(){
 					var height = $("#cover").height()
 					$(".scroll").css("max-height",""+height+"");
 					$("#game-description").html("<div class = 'card animated delay-5s fadeIn scroll'>"+idResponse.description+"</div>");
-					$("#release-date").html("<h4 class='card'>" + idResponse.released + "</h4>");
-					$("#genre").html("<h4 class='card'>" + idResponse.genres[0].name + "</h4>");
+					$("#release-date").html("<h4 class='card'>"+"Release Date: " + idResponse.released + "</h4>");
+					$("#genre").html("<h4 class='card'>"+ "Genres: " + idResponse.genres[0].name + "</h4>");
 					$("#made-by").html("<h4 class='card'>Developed by: " + idResponse.developers[0].name + "</h4>");
-					$("#rating").html("<h4 class='card'>"+idResponse.rating+"/5</h4>");
+					$("#rating").html("<h4 class='card'>"+"Rating: "+idResponse.rating+"/5</h4>");
 					$("#website").html("<h4 class='card animated delay-2s bounceInLeft'><a href='"+idResponse.website+"'>"+idResponse.name+"'s Website</a></h4>");
 					$("#name-goes-here").html("<h4 class= 'card animated delay-1s bounceInLeft'>"+idResponse.name);
 					$("#platform").empty();
