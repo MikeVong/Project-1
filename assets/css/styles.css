@@ -12,12 +12,11 @@ body {
 }
 .card{
 	margin-bottom: 20px;
+	text-align: center;
+	background-color: #7A306C;
 }
 h4, h3 {
     padding: 15px;
-}
-div {
-    
 }
 #name{
 	width: 100%;
@@ -26,4 +25,7 @@ div {
 .pix{
     width: 100px;
     height: 100px;
+}
+#made-by{
+	width: 90%;
 }

@@ -40,6 +40,8 @@ function getGame(){
 					$("#release-date").html("<h4 class='card'>" + idResponse.released + "</h4>");
 					$("#genre").html("<h4 class='card'>" + idResponse.genres[0].name + "</h4>");
 					$("#made-by").html("<h4 class='card'>Developed by: " + idResponse.developers[0].name + "</h4>");
+					$("#rating").html("<h4 class='card'>"+idResponse.rating+"/5</h4>")
+					$("#website").html("<h4 class='card'><a href='"+idResponse.website+"'>"+idResponse.name+"'s Website</a></h4>");
 				});
 
 				//---------------------
