@@ -1,3 +1,5 @@
+var gameID;
+var gameSearch;
 
 $("#search-button").on("click", function(event) 
     {
@@ -14,7 +16,7 @@ $("#search-button").on("click", function(event)
 		});
 		
 function getGame(){
-	var gameInfoSearch = $("#search-game").val().trim();
+	var gameInfoSearch = $("#search-game").val().trim().toLowerCase();
 	var infoQueryURL = "https://api.rawg.io/api/games?search="+ gameInfoSearch;
 	$("#cover-goes-here").empty();
 	$.ajax({
@@ -23,9 +25,22 @@ function getGame(){
 		}).then(function(infoResponse)
 			{
 			console.log(infoResponse);
-			$("#cover-goes-here").html("<img class='card' style='width:300px' src=" + infoResponse.results[0].background_image + ">");
-			$("#game-description").html("<h2>" + infoResponse.results[0].name + "</h2>");
-			$("#release-date").html("<h4>" + infoResponse.results[0].released + "</h4>");
-			$("#genre").html("<h4>" + infoResponse.results[0].genres[0].name + "</h4>");
+			gameID = infoResponse.results[0].id;
+			console.log(gameID);
+			}).then(function(){
+				var idQueryURL = "https://api.rawg.io/api/games/"+ gameID;
+				$.ajax({
+					url:idQueryURL,
+					method:"GET",
+				}).then(function(idResponse)
+				{
+					console.log(idResponse)
+					$("#cover-goes-here").html("<img class='card' style='width:300px' src=" + idResponse.background_image + ">");
+					$("#game-description").html("<p class='card' id='name'>" + idResponse.description + "</p>");
+					$("#release-date").html("<h4 class='card'>" + idResponse.released + "</h4>");
+					$("#genre").html("<h4 class='card'>" + idResponse.genres[0].name + "</h4>");
+					$("#made-by").html("<h4 class='card'>Developed by: " + idResponse.developers[0].name + "</h4>");
+				});
 			});
+			
 };
