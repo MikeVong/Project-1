@@ -29,7 +29,13 @@ h4, h3 {
 #made-by{
 	width: 90%;
 }
+#name-goes-here{
+	width: 90%;
+}
 .cardspace
 {
     margin: 9px;
+}
+.scroll{
+	overflow-y: auto;
 }
