@@ -6,7 +6,7 @@ $("#search-button").on("click", function(event)
     event.preventDefault();
     if ($("#search-game").val().trim() === "")
     {
-        alert("Please enter a game");
+		$('#\\#myModal').modal('show');
     }
     else
     {
