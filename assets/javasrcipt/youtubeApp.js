@@ -51,11 +51,12 @@ $("#search-button").on("click", function(event)
                         var newRow=$("<div>");
                         newRow.addClass("col-md-4");
                         var img = $("<iframe>");
-                        img.attr("width","380");
-                        img.attr("height", "280");
+                        img.attr("width","360");
+												img.attr("height", "260");
+												newRow.attr("margin-right", "20px");
                         img.attr("src", "https://www.youtube.com/embed/"+ videoLink);
-                        img.addClass("card");
-                        newRow.append(img);
+                        img.addClass("card animated delay-5s bounceInUp");
+												newRow.append(img);
                         $("#youtubeHere").append(newRow);
                         }; 
                 });
