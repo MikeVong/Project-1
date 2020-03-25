@@ -34,6 +34,7 @@ body {
     background-image: url(../images/game.jpg);
     background-blend-mode: soft-light;
 		background-color: #7A306C;
+		border: 2px solid rgba(0,0,0,.125);
 }
 h4, h3 {
     padding: 15px;
@@ -59,7 +60,7 @@ h4, h3 {
 }
 .scroll{
 	overflow-y: auto;
-	height: 465px;
+	height: 471px;
 	margin-bottom: 0px;
 	border: none;
 }
@@ -99,8 +100,9 @@ a:active{
 	display: inline;
 }
 #game-description{
+	margin-top: 2px;
 	margin-bottom: 20px;
-	height: 465px;
+	height: 471px;
 }
 #platform{
 	width: 100%;
