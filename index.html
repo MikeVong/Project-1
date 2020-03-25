@@ -34,14 +34,17 @@
 
     <div class="container">
 
-      <div class="jumbotron animated bounceInRight">
-        <h1 class="display-4">Game Bros!</h1>
-        <p class="lead">Search for any game of your choice for details and gameplay video!</p>
-        <hr class="my-4">
-        <input id="search-game" type="text" class="form-control" placeholder="Search for Games" aria-label="Search" aria-describedby="button-addon2"><br>
-        <a id="search-button" class="btn btn-primary btn-lg" href="#" role="button">Let's Go!</a>
+      <div class="row jumbotron animated bounceInRight">
+				<span class="col-lg-9">
+					<h1 class="display-4">Game Bros!</h1>
+					<p class="lead">Search for any game of your choice for details and gameplay video!</p>
+					<hr class="my-4">
+					<input id="search-game" type="text" class="form-control" placeholder="Search for Games" aria-label="Search" aria-describedby="button-addon2"><br>
+					<a id="search-button" class="btn btn-primary btn-lg" href="#" role="button">Let's Go!</a>
+				</span>
+				<span id="recent" class="card col-lg-3">Recent Game Searchs <div id="recentTable"></div> </span>
       </div>
-      <div class="recent card col-md-3"> </div>
+
       <!--Modal-->
       <div class="modal fade" id="#myModal">
         <div class="modal-dialog">

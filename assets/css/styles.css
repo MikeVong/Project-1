@@ -2,7 +2,6 @@ body {
     margin-top: 20px;
     background-color: #27213c;
 		color: white;
-		font-weight: bolder;
 }
 .jumbotron {
     background-image: url(../images/game.jpg);
@@ -14,6 +13,11 @@ body {
 		background-color: #27213c;
 		border: black;
 		color: white;
+}
+#recent{
+	background-image: none;
+	background-color: #27213c;
+	color: white;
 }
 .form-control{
 	background-color: #7A306C;
