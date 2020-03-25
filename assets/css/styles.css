@@ -1,7 +1,8 @@
 body {
     margin-top: 20px;
     background-color: #27213c;
-    color: #B8C4BB;
+		color: white;
+		font-weight: bolder;
 }
 .jumbotron {
     background-image: url(../images/game.jpg);
@@ -12,13 +13,27 @@ body {
 #search-button, #random-button {
 		background-color: #27213c;
 		border: black;
+		color: white;
+}
+.form-control{
+	background-color: #7A306C;
+	border-color: #27213c;
+	color: white;
+}
+.form-control:focus{
+	background-color: #7A306C;
+	border-color: #27213c;
+	color: white;
+}
+.form-control::placeholder{
+	color: #27213c;
 }
 .card{
-	margin-bottom: 20px;
+		margin-bottom: 20px;
     text-align: center;
     background-image: url(../images/game.jpg);
     background-blend-mode: soft-light;
-	background-color: #7A306C;
+		background-color: #7A306C;
 }
 h4, h3 {
     padding: 15px;
@@ -39,10 +54,30 @@ h4, h3 {
 }
 .cardspace
 {
-    margin: 9px;
+		margin: 9px;
+		display: inline;
 }
 .scroll{
 	overflow-y: auto;
+	height: 465px;
+	margin-bottom: 0px;
+	border: none;
+}
+.coverImg{
+	max-width: 350px; 
+	height :197px;
+}
+a{
+	color: #27213c;
+}
+a:hover{
+	color: #7A306C;
+}
+a:focus{
+	color: #7A306C;
+}
+a:active{
+	color: #7A306C;
 }
 .modal
 {
@@ -56,4 +91,38 @@ h4, h3 {
 
     text-align: center;
     
+}
+#website{
+	margin-bottom: 20px;
+}
+.inline{
+	display: inline;
+}
+#game-description{
+	margin-bottom: 20px;
+	height: 465px;
+}
+#platform{
+	width: 100%;
+}
+.pad{
+	padding-right:	10px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #27213c; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7A306C; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7A306C; 
 }
