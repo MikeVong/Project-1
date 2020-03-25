@@ -40,7 +40,7 @@ function getGame(){
 					console.log(idResponse)
 					$("#cover-goes-here").html("<img class='card animated delay-1s bounceInLeft coverImg' src=" + idResponse.background_image + ">");
 					$("#game-description").html("<div class = 'card animated delay-4s fadeIn scroll'>"+idResponse.description+"</div>");
-					$("#release-date").html("<h4 class='card animated delay-1s bounceInRight'>"+"Release Date:<br>" + idResponse.released + "</h4>");
+					$("#release-date").html("<h4 class='card animated delay-1s bounceInRight'>"+"Release Date:<br>" + moment(idResponse.released).format("MMMM Do, YYYY") + "</h4>");
 					$("#genre").html("<h4 class='card animated delay-2s bounceInRight'>"+ "Genres:<br>" + idResponse.genres[0].name + "</h4>");
 					$("#made-by").html("<h4 class='card animated delay-2s bounceInLeft'>Developed by:<br>" + idResponse.developers[0].name + "</h4>");
 					$("#rating").html("<h4 class='card animated bounceInRight'>"+"Rating:<br>"+idResponse.rating+"/5</h4>");
