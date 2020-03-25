@@ -23,6 +23,9 @@
   </head>
 
   <body>
+
+
+
     <div class="container">
 
       <div class="jumbotron animated bounceInRight">
@@ -32,6 +35,24 @@
         <input id="search-game" type="text" class="form-control" placeholder="Search for Games" aria-label="Search" aria-describedby="button-addon2"><br>
         <a id="search-button" class="btn btn-primary btn-lg" href="#" role="button">Let's Go!</a>
       </div>
+
+      <!--Modal-->
+      <div class="modal fade" id="#myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="./assets/images/x.jpg">
+              <h5>Please enter a game.</h5>
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+    <!-- /.modal-content -->
+        </div>
+  <!-- /.modal-dialog -->
+      </div>
+<!-- /.modal -->
+<!--End Modal-->
       
       <div id="info" class="row">
 
@@ -73,23 +94,7 @@
       </div>
       <div class="row" id="youtubeHere"></div>
     </div>
-<!--Modal-->
-<div class="modal fade" id="#myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img src="./assets/images/x.jpg">
-        <h5>Please enter a game.</h5>
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-      </div>
-      
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-<!--End Modal-->
+
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
