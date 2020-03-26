@@ -4,19 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Added link to the jQuery Library -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
       <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!--Moment.js-->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
     <!-- Bootstrap CSS -->
     <!-- jQuery Modal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
@@ -27,24 +23,19 @@
 		<link rel="stylesheet" href="./assets/css/styles.css">
     <title>Game Info</title>
   </head>
-
   <body>
-
-
-
+		<!-- container for jumbotron -->
     <div class="container">
-
       <div class="row jumbotron animated bounceInRight">
 				<span class="col-lg-9">
 					<h1 class="display-4">Game Bros!</h1>
-					<p class="lead">Search for any game of your choice for details and gameplay video!</p>
+					<p class="lead">Search for any game of your choice for details and related videos!</p>
 					<hr class="my-4">
 					<input id="search-game" type="text" class="form-control" placeholder="Search for Games" aria-label="Search" aria-describedby="button-addon2"><br>
 					<a id="search-button" class="btn btn-primary btn-lg" href="#" role="button">Let's Go!</a>
 				</span>
 				<span id="recent" class="card col-lg-3">Recent Game Searchs<hr> <div id="recentTable"></div> </span>
       </div>
-
       <!--Modal-->
       <div class="modal fade" id="#myModal">
         <div class="modal-dialog">
@@ -54,16 +45,12 @@
               <h5>Please enter a game.</h5>
               <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
             </div>
-      
           </div>
-    <!-- /.modal-content -->
         </div>
-  <!-- /.modal-dialog -->
-      </div>
-<!-- /.modal -->
-<!--End Modal-->
+			</div>
+			<!-- all info goes here -->
       <div id="info" class="row">
-
+				<!-- left column -->
         <div id="cover" class="col-lg-4">
 					<div class="row">
 						<div id="name-goes-here" class="col-lg-12"></div>
@@ -77,11 +64,13 @@
 					<div class="row">
 						<div id="website" class="col-lg-12"></div>
 					</div>
-        </div>
+				</div>
+				<!-- middle column -->
         <div class="col-lg-4">
           <div id="game-description" class="row">
           </div> 
-        </div>
+				</div>
+				<!-- right column -->
         <div class="col-lg-4">
           <div class="row">
             <div id="rating" class="col-lg-12"></div>
@@ -99,17 +88,14 @@
 						<div id="platform"></div>
 					</div>
         </div>
-      </div>
+			</div>
+			<!-- area for youtube videos -->
       <div class="row" id="youtubeHere"></div>
     </div>
-
-
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="./assets/javasrcipt/youtubeApp.js"></script>
     <script type="module" src="./assets/javasrcipt/RAWG.js"></script>
-    <script type="module" src="./assets/javasrcipt/recent.js"></script>
-    
+		<script type="module" src="./assets/javasrcipt/recent.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
