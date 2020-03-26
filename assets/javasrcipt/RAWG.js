@@ -3,15 +3,17 @@ var gameSearch;
 
 $("#search-button").on("click", function(event) 
     {
-    event.preventDefault();
+	event.preventDefault();
+	
     if ($("#search-game").val().trim() === "")
     {
 		$('#\\#myModal').modal('show');
     }
     else
     {
-        getGame();
-    }
+		getGame();
+	}
+	
     
 		});
 		
@@ -125,3 +127,10 @@ function getGame(){
 					});
 				});
 			};
+
+$("#search-game").keypress(function(e) {
+	if (e.which == 13) {
+		$("#search-button").click();
+		
+	}
+})
