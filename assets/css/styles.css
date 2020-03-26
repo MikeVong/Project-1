@@ -134,3 +134,9 @@ a:active{
 ::-webkit-scrollbar-thumb:hover {
   background: #7A306C; 
 }
+#recentTable {
+	height: 290px;
+}
+hr {
+	background-color: #7A306C;
+}

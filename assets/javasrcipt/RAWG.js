@@ -107,6 +107,18 @@ function getGame(){
 							pImg.attr("src","./assets/images/ios.png");
 							newCol.append(pImg);
 							$("#platform").append(newCol);
+							} else {
+							var newCol =$("<span>");
+							newCol.addClass("col-sm-3 pad");
+							var pImg = $("<img>");
+							pImg.attr("width", "50");
+							pImg.attr("height", "50");
+							pImg.attr("display","inline");
+							pImg.addClass("card");
+							pImg.addClass("cardspace");
+							pImg.attr("src","./assets/images/");
+							newCol.append(pImg);
+							$("#platform").append(newCol);
 							}
 						};
 

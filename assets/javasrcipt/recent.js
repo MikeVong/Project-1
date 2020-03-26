@@ -21,15 +21,27 @@ $("#search-button").on("click", function(event)
     
     var newRecent=
         {
-        rSearch: rSearch
+        rSearch: rSearch,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
         };
 
     database.ref().push(newRecent);
+    $(".recentItem:first").addClass("animated hinge");
+    setTimeout(function() {
+        $(".recentItem:first").remove();
+    }, 1000);
+    
 
     });
 
- database.ref().on("child_added", function(childSnapshot) 
+    database.ref().orderByChild("dateAdded").limitToLast(5).on("child_added", function(childSnapshot) 
     {
-    var recentDisplay = childSnapshot.val().recent;
-    $("#recent").append(recentDisplay);
+        
+        var recentDisplay = childSnapshot.val().rSearch;
+        var newRow = $("<div>");
+        newRow.addClass("card recentItem animated fadeIn");
+        newRow.append(recentDisplay);
+        $("#recentTable").append(newRow);
+
+        
     });
