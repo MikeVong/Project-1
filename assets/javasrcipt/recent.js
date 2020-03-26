@@ -43,5 +43,7 @@ $("#search-button").on("click", function(event)
         newRow.append(recentDisplay);
         $("#recentTable").append(newRow);
 
+        $("#search-game").val("");
+
         
     });

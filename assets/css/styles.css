@@ -1,8 +1,6 @@
 body {
 	margin-top: 20px;
-	background-image: url(../images/bg.jpg);
-	background-blend-mode: color-burn;
-    background-color:#7A306C;
+    background-color:#27213c;
 		color: white;
 }
 .jumbotron {
