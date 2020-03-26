@@ -1,3 +1,4 @@
+export var gameName;
 var gameID;
 var gameSearch;
 
@@ -40,6 +41,7 @@ function getGame(){
 				}).then(function(idResponse)
 				{
 					console.log(idResponse)
+					gameName = idResponse.name;
 					$("#cover-goes-here").html("<img class='card animated delay-1s bounceInLeft coverImg' src=" + idResponse.background_image + ">");
 					$("#game-description").html("<div class = 'card animated delay-4s fadeIn scroll'>"+idResponse.description+"</div>");
 					$("#release-date").html("<h4 class='card animated delay-1s bounceInRight'>"+"Release Date:<br>" + moment(idResponse.released).format("MMMM Do, YYYY") + "</h4>");
