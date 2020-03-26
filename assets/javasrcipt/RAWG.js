@@ -116,7 +116,7 @@ function getGame(){
 							pImg.attr("display","inline");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
-							pImg.attr("src","./assets/images/");
+							pImg.attr("src","./assets/images/Other.png");
 							newCol.append(pImg);
 							$("#platform").append(newCol);
 							}
