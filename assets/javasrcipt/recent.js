@@ -1,4 +1,4 @@
-
+import {gameName} from './RAWG.js';
 
 // Your web app's Firebase configuration
 var config = 
@@ -17,7 +17,7 @@ var database = firebase.database();
 $("#search-button").on("click", function(event) 
     {
     event.preventDefault();
-    var rSearch= $("#search-game").val().trim();
+    var rSearch= gameName;
     
     var newRecent=
         {
