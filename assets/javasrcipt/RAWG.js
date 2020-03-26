@@ -3,18 +3,19 @@ export var gameName;
 var gameID;
 var gameInfoSearch;
 //checks if search bar isnt empty then runs the game info search
-$("#search-button").on("click", function(event){
+$("#search-button").on("click", function(event)
+	{
 	event.preventDefault();
-	if ($("#search-game").val().trim() === ""){
-
-	$('#\\#myModal').modal('show');
-	}else{
-
-	gameInfoSearch = $("#search-game").val().trim().toLowerCase();
-	getGame();
-
-	};
-});
+	if ($("#search-game").val().trim() === "")
+		{
+		$('#\\#myModal').modal('show');
+		}
+		else
+			{
+			gameInfoSearch = $("#search-game").val().trim().toLowerCase();
+			getGame();
+			};
+	});
 //gets game info and displays it on screen
 function getGame(){
 	var infoQueryURL = "https://api.rawg.io/api/games?search="+ gameInfoSearch;
@@ -46,10 +47,11 @@ function getGame(){
 				$("#platform").empty();
 				$("#platform").addClass("animated delay-3s bounceInRight inline")
 				//checks for specific platforms to show corresponding pictures
-				for (var i=0;i<4;i++){
+				for (var i=0;i<4;i++)
+					{
 					var pName =idResponse.parent_platforms[i].platform.name;
-					if(pName ==="PC"){
-
+					if(pName ==="PC")
+						{
 						var newCol =$("<span>");
 						newCol.addClass("col-sm-3 pad");
 						var pImg = $("<img>");
@@ -58,60 +60,66 @@ function getGame(){
 						pImg.attr("src","./assets/images/pc.png");
 						newCol.append(pImg);
 						$("#platform").append(newCol);
-						}else if (pName === "PlayStation"){
-
-						var newCol =$("<span>");
-						newCol.addClass("col-sm-3 pad");
-						var pImg = $("<img>");
-						pImg.addClass("card");
-						pImg.addClass("cardspace");
-						pImg.attr("src","./assets/images/ps4.jpg");
-						newCol.append(pImg);
-						$("#platform").append(newCol);
-						}else if (pName === "Xbox"){
-
-						var newCol =$("<span>");
-						newCol.addClass("col-sm-3 pad");
-						var pImg = $("<img>");
-						pImg.addClass("card");
-						pImg.addClass("cardspace");
-						pImg.attr("src","./assets/images/xbox.jpg");
-						newCol.append(pImg);
-						$("#platform").append(newCol);
-						}else if (pName === "iOS"){
-
-						var newCol =$("<span>");
-						newCol.addClass("col-sm-3 pad");
-						var pImg = $("<img>");
-						pImg.addClass("card");
-						pImg.addClass("cardspace");
-						pImg.attr("src","./assets/images/ios.png");
-						newCol.append(pImg);
-						$("#platform").append(newCol);
-						}else{
-
-						var newCol =$("<span>");
-						newCol.addClass("col-sm-3 pad");
-						var pImg = $("<img>");
-						pImg.addClass("card");
-						pImg.addClass("cardspace");
-						pImg.attr("src","./assets/images/Other.png");
-						newCol.append(pImg);
-						$("#platform").append(newCol);
 						}
+						else if (pName === "PlayStation")
+							{
+							var newCol =$("<span>");
+							newCol.addClass("col-sm-3 pad");
+							var pImg = $("<img>");
+							pImg.addClass("card");
+							pImg.addClass("cardspace");
+							pImg.attr("src","./assets/images/ps4.jpg");
+							newCol.append(pImg);
+							$("#platform").append(newCol);
+							}
+						else if (pName === "Xbox")
+							{
+							var newCol =$("<span>");
+							newCol.addClass("col-sm-3 pad");
+							var pImg = $("<img>");
+							pImg.addClass("card");
+							pImg.addClass("cardspace");
+							pImg.attr("src","./assets/images/xbox.jpg");
+							newCol.append(pImg);
+							$("#platform").append(newCol);
+							}
+						else if (pName === "iOS")
+							{
+							var newCol =$("<span>");
+							newCol.addClass("col-sm-3 pad");
+							var pImg = $("<img>");
+							pImg.addClass("card");
+							pImg.addClass("cardspace");
+							pImg.attr("src","./assets/images/ios.png");
+							newCol.append(pImg);
+							$("#platform").append(newCol);
+							}
+						else
+							{
+							var newCol =$("<span>");
+							newCol.addClass("col-sm-3 pad");
+							var pImg = $("<img>");
+							pImg.addClass("card");
+							pImg.addClass("cardspace");
+							pImg.attr("src","./assets/images/Other.png");
+							newCol.append(pImg);
+							$("#platform").append(newCol);
+							}
 					};
 				});
 			});
 };
 //when you press the enter key it clicks the search button
-$("#search-game").keypress(function(e) {
-	if (e.which == 13) {
-
-		$("#search-button").click();
-	}
-})
+$("#search-game").keypress(function(e) 
+	{
+	if (e.which == 13) 
+		{
+			$("#search-button").click();
+		};
+	});
 //when you click a recent item it runs get game
-$(document).on("click",".recentItem",function(){
+$(document).on("click",".recentItem",function()
+	{
 	gameInfoSearch = $(this).text();
 	getGame();
-});
+	});
