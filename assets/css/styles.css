@@ -3,8 +3,10 @@ body
 	margin-top: 20px;
 	background-image: url(../images/bg1.jpg);
 	background-size: 100% 100%;
-    background-color:#27213c;
-		color: white;
+	background-position: center;
+	background-attachment: fixed;
+    	background-color:#27213c;
+	color: white;
 	}
 .jumbotron
 	{
