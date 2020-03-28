@@ -53,7 +53,7 @@ function getGame(){
 					if(pName ==="PC")
 						{
 						var newCol =$("<span>");
-						newCol.addClass("col-sm-3 pad");
+						newCol.addClass("col-sm-3 pad inline");
 						var pImg = $("<img>");
 						pImg.addClass("card");
 						pImg.addClass("cardspace");
@@ -64,7 +64,7 @@ function getGame(){
 						else if (pName === "PlayStation")
 							{
 							var newCol =$("<span>");
-							newCol.addClass("col-sm-3 pad");
+							newCol.addClass("col-sm-3 pad inline");
 							var pImg = $("<img>");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
@@ -75,7 +75,7 @@ function getGame(){
 						else if (pName === "Xbox")
 							{
 							var newCol =$("<span>");
-							newCol.addClass("col-sm-3 pad");
+							newCol.addClass("col-sm-3 pad inline");
 							var pImg = $("<img>");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
@@ -86,7 +86,7 @@ function getGame(){
 						else if (pName === "iOS")
 							{
 							var newCol =$("<span>");
-							newCol.addClass("col-sm-3 pad");
+							newCol.addClass("col-sm-3 pad inline");
 							var pImg = $("<img>");
 							pImg.addClass("card");
 							pImg.addClass("cardspace");
