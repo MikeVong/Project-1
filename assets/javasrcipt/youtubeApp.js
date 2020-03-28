@@ -14,7 +14,7 @@ $("#search-button").on("click", function(event)
         }
         else
             {
-			var gameSearch = $("#search-game").val().trim();
+						gameSearch = $("#search-game").val().trim();
             getVideo();
             };
     });

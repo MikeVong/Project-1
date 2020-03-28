@@ -1,115 +1,93 @@
-body
-	{
-	margin-top: 20px;
-	background-image: url(../images/bg1.jpg);
-	background-size: 100% 100%;
-	background-position: center;
-	background-attachment: fixed;
-    	background-color:#27213c;
-	color: white;
+body{
+		margin-top: 20px;
+		background-image: url(../images/bg1.jpg);
+		background-size: 100% 100%;
+		background-position: center;
+		background-attachment: fixed;
+		background-color:#27213c;
+		color: white;
 	}
-.jumbotron
-	{
+.jumbotron{
     background-image: url(../images/game.jpg);
     background-blend-mode: soft-light;
     background-size: 100% 100%;
     background-color: #7A306C;
 	}
-#search-button
-	{
-	background-color: #27213c;
-	border: black;
-	color: white;
+#search-button{
+		background-color: #27213c;
+		border: black;
+		color: white;
 	}
-.btn-primary:hover
-	{
-	transform: scale(1.02);
+.btn-primary:hover{
+		transform: scale(1.02);
 	}
-#recent
-	{
-	background-image: none;
-	background-color: #27213c;
-	color: white;
+#recent{
+		background-image: none;
+		background-color: #27213c;
+		color: white;
 	}
-.form-control
-	{
-	background-color: #7A306C;
-	border-color: #27213c;
-	color: white;
+.form-control{
+		background-color: #7A306C;
+		border-color: #27213c;
+		color: white;
 	}
-.form-control:focus
-	{
-	background-color: #7A306C;
-	border-color: #27213c;
-	color: white;
+.form-control:focus{
+		background-color: #7A306C;
+		border-color: #27213c;
+		color: white;
 	}
-.form-control::placeholder
-	{
-	color: #27213c;
+.form-control::placeholder{
+		color: #27213c;
 	}
-.card
-	{
-	margin-bottom: 20px;
+.card{
+		margin-bottom: 20px;
     text-align: center;
     background-image: url(../images/game.jpg);
     background-blend-mode: soft-light;
-	background-color: #7A306C;
-	border: 2px solid rgba(0,0,0,.125);
+		background-color: #7A306C;
+		border: 2px solid rgba(0,0,0,.125);
 	}
-h4,h3
-	{
+h4,h3{
     padding: 15px;
 	}
-#name
-	{
-	width: 100%;
-	text-align: center;
+#name{
+		width: 100%;
+		text-align: center;
 	}
 
-#made-by
-	{
-	width: 90%;
+#made-by{
+		width: 90%;
 	}
-#name-goes-here
-	{
-	width: 90%;
+#name-goes-here{
+		width: 90%;
 	}
-.cardspace
-	{
-	margin: 9px;
-	display: inline;
-	weight: 50px;
+.cardspace{
+		margin: 9px;
+		width: 50px;
 	}
-.scroll
-	{
-	overflow-y: auto;
-	height: 471px;
-	margin-bottom: 0px;
-	border: none;
+.scroll{
+		overflow-y: auto;
+		height: 471px;
+		margin-bottom: 0px;
+		border: none;
 	}
-.coverImg
-	{
-	max-width: 350px; 
-	height :197px;
+.coverImg{
+		max-width: 350px; 
+		height :197px;
 	}
-a
-	{
-	color: #27213c;
+a{
+		color: #27213c;
 	}
-a:hover
-	{
-	color: #7A306C;
+a:hover{
+		color: #7A306C;
 	}
-a:focus
-	{
-	color: #7A306C;
+a:focus{
+		color: #7A306C;
 	}
-a:active
-	{
-	color: #7A306C;
+a:active{
+		color: #7A306C;
 	}
-.modal
-	{
+.modal{
     position: relative;
     top: -300px;
     left: 400px;
@@ -119,53 +97,42 @@ a:active
     max-width: fit-content;
     text-align: center;
 	}
-#website
-	{
-	margin-bottom: 20px;
+#website{
+		margin-bottom: 20px;
 	}
-.inline
-	{
-	display: inline;
+.inline{
+		display: inline;
 	}
-#game-description
-	{
-	margin-top: 2px;
-	margin-bottom: 20px;
-	height: 471px;
+#game-description{
+		margin-top: 2px;
+		margin-bottom: 20px;
+		height: 471px;
 	}
-#platform
-	{
-	width: 100%;
+#platform{
+		width: 100%;
 	}
-.pad
-	{
+.pad{
 	padding-right:	10px;
 	}
-::-webkit-scrollbar
-	{
+::-webkit-scrollbar{
   	width: 12px;
 	}
-::-webkit-scrollbar-track
-	{
+::-webkit-scrollbar-track{
   	background: #27213c; 
 	}
-::-webkit-scrollbar-thumb
-	{
+::-webkit-scrollbar-thumb{
   	background: #7A306C; 
 	}
-::-webkit-scrollbar-thumb:hover
-	{
- 	 background: #7A306C; 
+::-webkit-scrollbar-thumb:hover{
+ 		 background: #7A306C; 
 	}
-#recentTable
-	{
-	height: 290px;
+#recentTable{
+		height: 290px;
 	}
-hr
-	{
-	background-color: #7A306C;
+hr{
+		background-color: #7A306C;
 	}
-.recentItem:hover
-	{
-	transform: scale(1.02);
+.recentItem:hover{
+		cursor: pointer;
+		transform: scale(1.02);
 	}
