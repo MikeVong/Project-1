@@ -64,6 +64,7 @@ h4,h3{
 .cardspace{
 		margin: 9px;
 		width: 50px;
+		display: inherit;
 	}
 .scroll{
 		overflow-y: auto;
